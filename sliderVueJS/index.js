@@ -29,13 +29,10 @@ const app = new Vue({
         nextBtnHandler: function () {
             if (this.currentSlide === this.slides.length) return;
             this.currentSlide++;
-            console.log(this.currentSlide);
-            console.log(this.slides.length);
         },
         prevBtnHandler: function () {
             if (this.currentSlide === 1 ) return;
             this.currentSlide--;
-            console.log(this.slides.length);
         },
     },
     
