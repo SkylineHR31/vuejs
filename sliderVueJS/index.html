@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div id="app">
+            <div class="container">
+                <nav>
+                    <a href="../index.html">< Back to home</a>
+                </nav>
+                <div class="slider-wrapper">
+                    <div class="slider-inner">
+                        <div v-for="(slide, index) in slides" :key="slide.id" 
+                        :class="slide.id === currentSlide ? 'active' : ''" class="slide">
+                            <img v-bind:src="slide.src" alt="slider image">
+                            <div class="title">{{slide.title}}</div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button @click="prevBtnHandler()" class="btn"><</button>
+                        <button @click="nextBtnHandler()" class="btn">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="./index.js"></script>
+</body>
+</html>
