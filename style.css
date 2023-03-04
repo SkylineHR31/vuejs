@@ -114,3 +114,54 @@ nav {
     padding: 5px 20px;
     border-radius: 10px;
 }
+
+/* api part */
+
+.users-list-wrapper {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px black;
+    width: 100%;
+    min-height: 500px;
+    padding: 30px;
+}
+
+.users-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.users-list-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+
+.users-list-item:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: 2px solid;
+    color: red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    cursor: pointer;
+}

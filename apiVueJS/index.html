@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div id="app">
+            <div class="container">
+                <nav>
+                    <a href="../index.html">< Back to home</a>
+                </nav>
+                <div class="users-list-wrapper">
+                    <ul class="users-list">
+                        <li v-for="(user, index) in users" :key="index" 
+                        class="users-list-item">
+                            <img v-bind:src="user.image" class="user-image" alt="user avatar">
+                            <span class="user-name">{{ user.name }}</span>
+                            <span class="user-gender">{{ user.gender }}</span>
+                            <button @click="deleteBtnHandler(index)" class="btn-delete">Delete</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="./index.js"></script>
+</body>
+</html>
